@@ -1,5 +1,6 @@
 @page "/BasicMaze"
 @using labyrinth
+@using MermaidJS.Blazor
 
 <PageTitle>Basic Maze Visualizer</PageTitle>
 
@@ -8,7 +9,7 @@
 <input type="text" @bind= "name" />
 
 <button @onclick="GenerateMaze">Generate Basic Maze</button>
-<p>@pathOutOfMaze</p>
+<MermaidDiagram Definition=@pathOutOfMaze />
 
 @code
 {
